@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" type="text/css" href="node.css" media="screen" />
+</head>
+<body>
+    <div id="app">
+        <div class="form">
+          <h1>Adicionar tarefa</h1>
+          <h2>Descrição</h2>
+          <form>
+            <input id="desc"
+              class="tarefa"
+              name="tarefa"
+              id="tarefa"
+              placeholder="Descrição da tarefa"
+            />
+            <button id="adc">Adicionar</button>
+            <div class="dropdown">
+              <button class="dropbtn">Filtrar<img src="https://www.pngmart.com/files/3/Down-Arrow-PNG-Image.png" width="13px" height="13px" padding="20px"></button>
+              <div class="dropdown-content">
+                <a href="concluidas/index.html">Concluídas</a>
+                <a href="">Não Concluídas</a>
+              </div>
+            </div>
+                
+          </form>
+        </div>
+        
+        <div id="tarefas">
+          <hr>
+          <h2>Tarefas</h2>
+  
+          <ul>
+            <!-- <li>
+              <span>Tarefa 01</span>
+              <button>Remover</button>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+
+
+    <script src="web.js"></script>
+    <script>
+        //Initialize Parse
+        Parse.initialize("YOUR_PARSE_APP_ID", "YOUR_PARSE_JS_KEY"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+        Parse.serverURL = "https://parseapi.back4app.com/";
+        </script>
+    
+</body>
+</html>
