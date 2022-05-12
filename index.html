@@ -1,56 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas</title>
-    <link rel="stylesheet" type="text/css" href="node.css" media="screen" />
+    <title>LISTA</title>
+    <link rel="stylesheet" type="text/css" href="back.css" media="screen" /> 
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
 </head>
 <body>
-    <div id="app">
-        <div class="form">
-          <h1>Adicionar tarefa</h1>
-          <h2>Descrição</h2>
-          <form>
-            <input id="desc"
-              class="tarefa"
-              name="tarefa"
-              id="tarefa"
-              placeholder="Descrição da tarefa"
-            />
-            <button id="adc">Adicionar</button>
-            <div class="dropdown">
-              <button class="dropbtn">Filtrar<img src="https://www.pngmart.com/files/3/Down-Arrow-PNG-Image.png" width="13px" height="13px" padding="20px"></button>
-              <div class="dropdown-content">
-                <a href="concluidas/index.html">Concluídas</a>
-                <a href="">Não Concluídas</a>
-              </div>
-            </div>
-                
-          </form>
-        </div>
+    <h1>lista tarefas</h1>
+    <hr>
+    <div>
+    descrição:<input type="text" id="tex">
+    <input type="button" value="inserir" onclick="mostratarefas()" id="btn">
+    <select  id="op">
+        <option id="filter">filtrar</option>
+        <option id="conc">concluidas</option>
+        <option id="pend">pendentes</option>
+    </select>
+    </div>
+    <hr>
+    <p>
+    <div1>
+    <ul id="lis" >
         
-        <div id="tarefas">
-          <hr>
-          <h2>Tarefas</h2>
-  
-          <ul>
-            <!-- <li>
-              <span>Tarefa 01</span>
-              <button>Remover</button>
-            </li> -->
-          </ul>
-        </div>
-      </div>
-
-
-    <script src="web.js"></script>
-    <script>
-        //Initialize Parse
-        Parse.initialize("YOUR_PARSE_APP_ID", "YOUR_PARSE_JS_KEY"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-        Parse.serverURL = "https://parseapi.back4app.com/";
-        </script>
+    </ul>
     
+    </p>
+    </div1>
+    <script src="back.js"></script>
+    <script>
+          Parse.initialize("xq9OiG89H1yoNFxiS9vys7LxFM4GEJGKkrQcW1m4", "xq9OiG89H1yoNFxiS9vys7LxFM4GEJGKkrQcW1m4"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+          Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+  
 </body>
 </html>
