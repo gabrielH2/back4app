@@ -1,6 +1,14 @@
-const inputElement = document.querySelector("input");
-const buttonElement = document.querySelector("form button");
-const ulElement = document.querySelector("ul");
+// Initialize Parse
+Parse.initialize("JfMeozLs8UZFxaZibAiZhlpDl5OZkyjVwzdxLfqw", "fi6LWURzRGmTg7neZfI79MJaB2QHjWhiZ4nVFvKD");
+Parse.serverURL = "https://parseapi.back4app.com/";
+   
+
+
+const inputElement = document.getElementById("tex");
+const buttonElement = document.getElementById("btn");
+const ulElement = document.getElementById("lis");
+const SelectElement = document.getElementById("op")
+
 
 
 let tarefas = [];
@@ -8,41 +16,45 @@ let tarefas = [];
 buttonElement.onclick = ev => {
   ev.preventDefault();
 
-  //for (let i=0; i<tarefas.length; i++) {
 
   if (inputElement.value) {
     
-
+    
     const textElement = document.createElement("span");
     textElement.innerHTML = inputElement.value;
 
     const btnElement = document.createElement("button");
     btnElement.innerHTML = "Remover";
-    btnElement.id = "remove";
 
     const btncon = document.createElement('input');
     btncon.type = "checkbox";
     btncon.id = "check";
+    
+    
 
     const liElement = document.createElement("li");
-    liElement.id = "li";
-    liElement.appendChild(btncon);
     liElement.appendChild(textElement);
     liElement.appendChild(btnElement);
+    liElement.appendChild(btncon);
+    
 
-  
     btnElement.onclick = () => {
-      ulElement.removeChild(liElement) 
+      ulElement.removeChild(liElement)  
     }
-
+    
     btncon.onclick = () => {
-        if (btncon.checkValidity) {
         textElement.style.textDecoration = 'line-through';
-        } 
     }
+    
+  
+ 
 
-    ulElement.appendChild(liElement);
+ulElement.appendChild(liElement);
     inputElement.value = "";
-  }
 
-};
+    
+  
+   }
+    
+  }
+  
